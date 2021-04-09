@@ -23,16 +23,16 @@ r = 0 # in meters
 N = 100 # number of particles
 i = 0
 j = 0
-x = []
-y = []
-z = []
-r = 0
-t = []
+x = 0
+y = 0
+z = 0
+t = 0
+
 dx = np.random.normal(mu, sigma, N)
 dy = np.random.normal(mu, sigma, N)
 dz = np.random.normal(mu, sigma, N)
 
-for i in range(0, 100):
+for i in range(0, N):
     while (r < 6.9634E8):  
         x += dx[j]
         y += dy[j]
