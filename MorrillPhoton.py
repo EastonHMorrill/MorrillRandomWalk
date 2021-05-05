@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 mu = 0
 sigma = 56176151.52
-pos = [0.0, 0.0, 0.0]
+# pos = [0.0, 0.0, 0.0]
 
 # def Step(pos, N, mu, sigma):
 #     dx = np.random.normal(mu, sigma, N)
@@ -22,24 +22,25 @@ pos = [0.0, 0.0, 0.0]
 r = 0 # in meters
 N = 100 # number of particles
 i = 0
-j = 0
 x = 0
 y = 0
 z = 0
 t = 0
+mu = 0
+sigma = 56176151.52
 
 dx = np.random.normal(mu, sigma, N)
 dy = np.random.normal(mu, sigma, N)
 dz = np.random.normal(mu, sigma, N)
 
-for i in range(0, N):
+for c in range(0, N):
     while (r < 6.9634E8):  
-        x += dx[j]
-        y += dy[j]
-        z += dz[j]
+        x += dx[i]
+        y += dy[i]
+        z += dz[i]
         r = np.sqrt(x**2 + y**2 + z**2)
-        j += 1
-    t_tot = j # in years for one photon
+        i += 1
+    t_tot = i # in years for one photon
     t += t_tot # in years for all photons in range (0, N)
     t_avg = t/N # average in years per photon
 
